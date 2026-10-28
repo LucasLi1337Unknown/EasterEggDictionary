@@ -44,7 +44,7 @@ function clearEffects(){clearInterval(clockTimer);clearTimeout(stageTimer);$('su
 async function search(raw){
   const word=raw.trim();if(!word)return;
   resetGravity();clearEffects();controller?.abort();controller=new AbortController();const number=++requestNumber;
-  $('query').value=word;$('status').textContent='';$('searchHint').textContent='Follow your curiosity.';
+  $('query').value=word;$('status').textContent='';$('searchButton').removeAttribute('aria-busy');$('searchHint').textContent='Follow your curiosity.';
   const key=normalize(word);
   if(key==='time'){special('time','','The present moment, wherever you happen to be.');const tick=()=>{const now=new Date();$('entry').querySelector('.special-value').textContent=now.toLocaleTimeString('en-US');$('entry').querySelector('.special-note').textContent=now.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'})+' · '+Intl.DateTimeFormat().resolvedOptions().timeZone;};tick();clockTimer=setInterval(tick,1000);return;}
   if(key==='the creator of this website'){special('the creator of this website','Lucas Li','The person behind this little corner of the internet.');return;}

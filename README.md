@@ -2,6 +2,8 @@
 
 A thoughtfully designed English dictionary for curious minds.
 
+**Live website:** https://eastereggdictionary.vercel.app/
+
 Look up definitions, hear pronunciations, explore related words, and keep a reading list on your own device. Built with HTML, CSS, JavaScript, and small Vercel functions.
 
 Dictionary entries are provided by Free Dictionary API, with Datamuse / WordNet as a fallback. Each entry links to its source where available. This is an independent project and is not affiliated with Oxford University Press.

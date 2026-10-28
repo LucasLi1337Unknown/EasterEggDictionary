@@ -5,8 +5,10 @@ module.exports = async function handler(req, res) {
     const response = await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(word), {signal:AbortSignal.timeout(8000)});
     if (response.ok) {
       const entries = await response.json();
-      res.setHeader('Cache-Control','public, s-maxage=86400, stale-while-revalidate=604800');
-      return res.status(200).json({entries, provider:'Free Dictionary API'});
+      if (Array.isArray(entries) && entries.length && entries[0].word && entries[0].meanings?.length) {
+        res.setHeader('Cache-Control','public, s-maxage=86400, stale-while-revalidate=604800');
+        return res.status(200).json({entries, provider:'Free Dictionary API'});
+      }
     }
   } catch {}
   try {
