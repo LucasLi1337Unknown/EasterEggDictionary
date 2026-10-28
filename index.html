@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A thoughtfully designed English dictionary. Definitions, pronunciations, and a little curiosity."><meta name="theme-color" content="#f6f4ed"><title>EasterEggDictionary — Words worth finding.</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' rx='16' fill='%232b5946'/%3E%3Ctext x='12' y='43' font-size='38' fill='%23fff' font-family='Georgia'%3Ee.%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head>
+<body>
+<div class="shell">
+<header data-fall><a class="brand" href="/" aria-label="EasterEggDictionary home"><span class="brandmark">e.</span><span>EasterEgg<span class="brandlight">Dictionary</span></span></a><div class="header-actions"><button id="savedToggle" class="plain">Saved words <span id="savedCount">0</span></button><button id="themeToggle" class="icon" aria-label="Toggle dark mode">◐</button></div></header>
+<main>
+<section class="intro" data-fall><p class="eyebrow"><span class="dot"></span> A SMALL PLACE FOR BIG WORDS</p><h1>Words worth <em>finding.</em></h1><p class="lede">Find the meaning. Follow your curiosity.</p></section>
+<form id="searchForm" data-fall autocomplete="off"><label class="sr-only" for="query">Search the English dictionary</label><span class="magnify" aria-hidden="true">⌕</span><input id="query" placeholder="What word is on your mind?" maxlength="100" spellcheck="false" required><button type="submit" id="searchButton">Look it up <span aria-hidden="true">↗</span></button><kbd>/</kbd></form>
+<div class="search-meta" data-fall><span>ENGLISH DICTIONARY</span><span id="searchHint">A word. A meaning. A new beginning.</span></div>
+<div id="status" role="status" aria-live="polite"></div>
+<div class="workspace">
+<article id="entry" class="entry" aria-live="polite" data-fall></article>
+<aside>
+<section class="daily card" data-fall><div class="tiny-title"><span>THE DAILY DISCOVERY</span><span>✳</span></div><p class="daily-date" id="today"></p><h2>serendipity</h2><p class="phonetic">/ˌsɛɹənˈdɪpɪti/ <span>noun</span></p><p>The quiet art of finding something wonderful when you weren't looking for it.</p><button class="textlink" data-word="serendipity">Explore this word <span>↗</span></button><div class="orbital" aria-hidden="true"><span>✦</span><i></i><b>✧</b></div><small>An editorial definition, chosen for the curious.</small></section>
+<section class="recent card" data-fall><div class="tiny-title">YOUR RECENT WANDERINGS</div><div id="recent"></div><p id="recentEmpty">Your next discovery starts with a search.</p></section>
+</aside>
+</div>
+<section id="savedPanel" class="card saved-panel" hidden data-fall><div class="tiny-title"><span>YOUR WORD COLLECTION</span><button class="plain" id="closeSaved" aria-label="Close saved words">×</button></div><div id="savedList"></div></section>
+<section class="explore" data-fall><span>TAKE A WORD FOR A WALK</span><div><button data-word="sonder">sonder ↗</button><button data-word="ephemeral">ephemeral ↗</button><button data-word="petrichor">petrichor ↗</button><button data-word="eloquent">eloquent ↗</button></div></section>
+</main>
+<footer data-fall><span>A dictionary for the endlessly curious.</span><div><span>Independent & open source</span><button id="aboutButton" class="plain">About & privacy</button></div></footer>
+</div>
+<button id="resetGravity" hidden>↑ Put everything back</button>
+<dialog id="about"><button class="close-dialog" aria-label="Close about dialog">×</button><p class="eyebrow">A NOTE FROM THE DICTIONARY</p><h2>Stay curious.</h2><p>An independent English dictionary powered by Free Dictionary API, with Datamuse / WordNet as a fallback. Not affiliated with Oxford University Press.</p><p>Recent searches and saved words live only in your browser. Normal searches are sent to dictionary providers. We use no analytics, accounts, or tracking cookies.</p><p>Audio availability depends on the entry and your browser. Definitions may be incomplete; follow an entry's source for more context.</p><a href="https://github.com/LucasLi1337Unknown/EasterEggDictionary" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></dialog>
+<div id="surpriseStage" hidden></div>
+</body></html>
